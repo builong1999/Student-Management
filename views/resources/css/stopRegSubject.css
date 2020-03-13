@@ -1,0 +1,45 @@
+
+
+  .workarea {
+    width: 80vw;
+    margin-left: 290px;
+    margin-top: 90px;
+    display: inline-block;
+  }
+
+  .content {
+    border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 20px;
+      padding-top: 30px;
+      position: relative;
+      width: 65%;
+      margin: 5px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .title-info {
+    position: absolute;
+    top: -15px;
+    left: 25px;
+    min-width: 240px;
+    background: #fff;
+    font-size: 20px;
+    padding-left: 10px;
+    color: #f47724;
+  }
+
+  .stopReg {
+    width: 140px;
+    height: 35px;
+    background-color: rgb(151, 1, 1); 
+    color: white; 
+    border: 2px solid rgb(100, 2, 2);
+    border-radius: 5px;
+    float: right;
+    /* margin-bottom: 100%; */
+  }
+  .stopReg:hover {
+  background-color: rgb(100, 2, 2);
+  }

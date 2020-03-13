@@ -1,0 +1,381 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+    transition: all 0.5s;
+}
+
+* {
+    /* padding: 0px; */
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+input[type="text"], input[type="password"], textarea, select {
+    outline: none;
+}
+
+input, select {
+    background-color: transparent;
+}
+
+header {
+    background-position: center;
+    background-color: #0795df;
+    border-bottom: solid 8px #1b80c4;
+    height: 12vh;
+}
+
+::placeholder {
+    color: #3E3E3E;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    color: black;
+    text-align: center;
+}
+
+/* ------------------------------------------------TEMPLATE---------------------------------- */
+
+ul {
+    font-size: 18px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    margin-left: 40px;
+}
+
+li {
+    padding: 5px 10px;
+    list-style: none;
+    font-size: 15px;
+}
+
+li:hover {
+    background-color: #dcdcdc;
+}
+
+.template a {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+}
+
+.label-click {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    border-radius: 25px;
+    left: 40px;
+    transition: all 0.2s;
+    padding: 14px 0px;
+    padding-left: 8px;
+}
+
+.Logo {
+    position: absolute;
+    top: 10px;
+    left: 150px;
+}
+
+.Logo-img {
+    width: 60px;
+}
+
+i {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.header-style {
+    position: fixed;
+    top: 0px;
+    width: 98.9vw;
+    height: 8vh;
+    background-color: #ffffff;
+    border-bottom: solid 4px #f3f3f3;
+}
+
+.function-name {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+}
+
+.regularly-action {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 30px;
+}
+
+.regularly-action a {
+    font-family: 'Roboto';
+    border: ridge 1px #0795df;
+    color: #0795df;
+    padding: 5px 5px;
+    border-radius: 3px;
+}
+
+.Left {
+    top: 61px;
+    position: fixed;
+    background-color: #f5f5f5;
+    width: 280px;
+    height: 91vh;
+}
+
+.Left div {
+    width: 90%;
+}
+
+nav {
+    margin-top: 61px;
+    background-color: #fafafa;
+    width: 98.9vw;
+    height: 110vh;
+}
+
+.home-page {
+    cursor: pointer;
+    padding: 20px 0px;
+    border-bottom: solid 2px #dcdcdc;
+    margin-left: 5%;
+}
+
+.home-page:hover {
+    background-color: #dcdcdc;
+}
+
+.Function {
+    cursor: pointer;
+    border-bottom: solid 2px #dcdcdc;
+    margin-left: 5%;
+}
+
+.func-click {
+    border-bottom: solid 1px #dcdcdc;
+    padding: 20px 0px;
+}
+
+.func-click:hover {
+    background-color: #dcdcdc;
+}
+
+
+.Cpass {
+    cursor: pointer;
+    border-bottom: solid 2px #dcdcdc;
+    margin-left: 5%;
+}
+
+.pCPass {
+    border-bottom: solid 1px #dcdcdc;
+    padding: 20px 0px;
+}
+
+.pCPass:hover {
+    background-color: #dcdcdc;
+}
+
+
+
+.About {
+    cursor: pointer;
+    border-bottom: solid 2px #dcdcdc;
+    margin-left: 5%;
+}
+
+.pAbout {
+    border-bottom: solid 1px #dcdcdc;
+    padding: 20px 0px;
+}
+
+.pAbout:hover {
+    background-color: #dcdcdc;
+}
+
+.work-area {
+    width: 80vw;
+    margin-left: 290px;
+    display: inline-block;
+}
+
+.divTitle {
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: solid 1px #dcdcdc;
+}
+
+.function div {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 16px;
+    padding: 10px 40px;
+}
+
+.disable {
+    position: absolute;
+    width: 82vw;
+    height: 100vh;
+    left: 260px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------------------------------------------------------------------ */
+
+.addInfo {
+    border: outset 2px #1b80c4;
+    background-color: white;
+    border-radius: 10px;
+    display: inline-block;
+    font-style: inherit;
+    margin-top: 20px;
+    margin-left: 180px;
+    padding-right: 5px;
+    transition: all 0.5s;
+}
+
+.addInfo div {
+    border-bottom: solid 1px #3E3E3E;
+    margin-bottom: 10px;
+    color: #3c8dbc;
+}
+
+.addID {
+    padding: 10px 10px;
+    border-style: ridge;
+    border-radius: 6px;
+    margin-right: 10px;
+    margin-left: 20px;
+    font-size: 15px;
+    transition: all 0.25s;
+}
+
+.addNum {
+    border-style: ridge;
+    padding: 10px 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 15px;
+    transition: all 0.25s;
+}
+
+.addPos {
+    border-style: ridge;
+    padding: 10px 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 15px;
+    transition: all 0.25s;
+}
+
+.addPos:hover, .addID:hover, .addNum:hover {
+    background-color: #eff0f2;
+}
+
+.btnValidate {
+    margin-left: 10px;
+    padding: 10px 10px;
+    border-radius: 3px;
+    margin-right: 25px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.btnValidate:hover {
+    background-color: #cccccc;
+    color: #3e3e3e;
+    border-style: ridge;
+    border-color: #3e3e3e;
+}
+
+.fullInfo {
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+.showInfo {
+    background-color: white;
+    display: none;
+    border-radius: 6px;
+    float: right;
+    margin-top: -280px;
+    border: outset 2px #1b80c4;
+}
+
+.showInfo div {
+    border-bottom: ridge 2px black;
+    padding-bottom: 5px;
+    margin: 10px 0px;
+}
+
+.fshowInfo {
+    height: 540px;
+    width: 650px;
+    padding-left: 0px;
+    overflow: auto;
+}
+
+.TOP li {
+    text-align: center;
+    list-style: none;
+    font-size: 16px;
+    width: 24%;
+    color: black;
+    display: inline-block;
+}
+
+.TOP {
+    padding-left: 4px;
+    padding-right: 0px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.tbl {
+    background-color: #cccccc;
+    border: solid 1px black;
+    border-spacing: 1px 1px;
+}
+
+.tbl tr td {
+    font-size: 15px;
+    overflow: auto;
+    background-color: white;
+    width: 200px;
+    text-align: center;
+}
+
+.legend2 {
+    position: absolute;
+    right: 1px;
+    top: 10px;
+    cursor: pointer;
+    background-color: #eff0f2;
+    padding: 6px 6px;
+    transition: all 0.5s;
+}
+
+.legend2:hover {
+    background-color: #1c4d56;
+    border: ridge 2px white;
+}
+
+.alertText {
+    margin-top: 30px;
+    margin-left: 300px;
+    font-size: 18px;
+    color: red;
+}

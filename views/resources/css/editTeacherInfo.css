@@ -1,0 +1,107 @@
+.change-info, .cancel, .save-info {
+    width: 80px;
+    height: 25px;
+    background-color: rgb(91, 67, 224); 
+    color: white; 
+    border: 2px solid rgb(24, 13, 90);
+    border-radius: 5px;
+  }
+.save-info {
+  width: 100px;
+}
+  
+.change-info:hover, .save-info:hover, .cancel:hover {
+    background-color: rgb(35, 28, 121);
+    /* color: black; */
+  }
+
+ .info-adjust {
+    color: #df0707
+}
+
+.workarea {
+  width: 80vw;
+  margin-left: 290px;
+  margin-top: 90px;
+  display: inline-block;
+}
+
+.body {
+  font-weight: bold;
+}
+
+.full-name, .Faculty {
+  /* text-transform: capitalize; */
+  font-size: 15px;
+  line-height: 1;
+}
+
+.change-info {
+  float: right;
+}
+
+
+.old-info table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+.Address, .Email, .Contact, .DOB {
+  width:500px;
+  border-radius: 5px;
+  border: 2px solid #dcdcdc;
+  padding: 5px 5px 5px 5px;
+}
+
+
+.add-adjust, .mail-adjust, .contact-adjust, .dob-adjust{
+  width: 85%;
+  border: white;
+  align-content: center;
+  /* box-shadow: inset 1px 1px 4px #FFD5E7; */
+  outline: none;
+  border-style: none;
+  margin: 4px;
+  background-color: #f5f4f4;
+
+} 
+
+.add-adjust:hover, .mail-adjust:hover, .contact-adjust:hover, .dob-adjust:hover {
+  border: white;
+}
+
+.span-name {
+  text-transform: uppercase;
+}
+
+div {
+  margin: 10px 5px 10px 5px;
+}
+
+.content-acc {
+  border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    padding-top: 30px;
+    /* position: relative; */
+    width: 70%;
+}
+
+.title-info-acc {
+  /* position: absolute; */
+  top: -22px;
+  left: 25px;
+  min-width: 190px;
+  background: #fff;
+  font-size: 20px;
+  padding-left: 10px;
+  color: #f47724;
+}
+.info-form-title{
+  text-align: center;
+  background-color: #0c6aaa;
+  color: #fff;
+  text-transform: uppercase;
+}

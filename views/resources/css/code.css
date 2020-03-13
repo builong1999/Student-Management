@@ -1,0 +1,33 @@
+.SubjectTable, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f5f4f4;
+  }
+
+  .search {
+    padding: 5px 5px 5px 5px;
+    margin: 4px;
+    align-content: center;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    outline: none;
+    border-style: none;
+    margin: 4px;
+    box-sizing: border-box;
+    border:1px solid #BEBEBE;
+  }
+
+  .search:focus{
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+    -moz-window-shadow: 0 0 8px #88D5E9; 
+  }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<php ?>
+<html>
+    <head>
+        <style>
+            .dropdown {
+                 position: relative;
+                display: inline-block;
+            }
+            .dropdown-child {
+                display: none;
+                 background-color: black;
+                 min-width: 100px;
+            }
+            .dropdown-child a {
+                color: whitesmoke;
+                padding: 20px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown:hover .dropdown-child {
+                display: block;
+            }
+        </style>
+        <style type="text/css">
+            .div1 {
+                border:1px solid black;
+                padding:30px;
+                margin: 20px;
+            }
+        </style>
+        <title>
+            Thông tin sinh viên
+        </title>
+        <style>
+            body{
+                background-image: linear-gradient(#557A95, #7395AE);
+                background-position: center;
+                margin: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="D:\bk\cnpm\tt\anh2.png">
+        <h1> <center>TỔNG THỂ KHÓA HỌC</center></h1>
+        <div class="dropdown">
+            <button class="mainmenubtn">Học kì</button>
+            <div class="dropdown-child">
+                <a href="#">Học kì 181</a>
+                <a href="#">Học kì 182</a>
+            </div>
+        </div>
+        <div class="div1">
+            <% for (var i=0; i<count;i++) {%>
+                <p><a href="./bg.html"><%= data[i].ClassName %> (<%= data[i].ClassCode %>) - <%= data[i].Teacher %></a></p>
+            <%}%>
+        </div>
+    </body>
+</html>

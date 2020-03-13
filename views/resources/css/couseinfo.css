@@ -1,0 +1,33 @@
+.workarea {
+    width: 80vw;
+    margin-left: 290px;
+    margin-top: 90px;
+    display: inline-block;
+  }
+
+  a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  .div1 {
+    border: 1px solid black;
+    padding: 30px;
+    margin: 20px;
+}

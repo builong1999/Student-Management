@@ -1,0 +1,213 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    transition: all 0.5s;
+}
+
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+input[type="text"], input[type="password"], textarea, select {
+    outline: none;
+}
+
+input, select {
+    background-color: transparent;
+}
+
+
+header {
+    background-position: center;
+    background-color: rgb(127, 183, 231);
+    border-bottom: solid 8px #1b80c4;
+    height: 15vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    background-color: rgb(127, 183, 231);
+    padding-top: 50px;
+    height: 100vh;
+}
+/* --------------------------------HEADER----------------------- */
+
+.Logo {
+    width: 75px;
+}
+
+.Logo_ad {
+    padding: 2px;
+    cursor: pointer;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+
+.Func-name, .Logout, .Change-pass{
+    color: white;
+    transition: all 0.5s;
+}
+
+.Func-name{
+    color: white;
+    margin-top: -40px;
+    margin-left: 600px;
+    font-size: 30px;
+}
+
+.Logout{
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.Change-pass{
+    margin-left: 450px;
+    font-size: 15px;
+}
+
+.Logout:hover, .Change-pass:hover{
+    color: red;
+}
+
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+p{
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* -------------------------------------------BODY--------------------------- */
+
+
+fieldset{
+    margin: 40px 20%;
+    border-radius: 4px;
+    border: none;
+    background-color: white;
+    display: none;
+    width: 60%;
+}
+
+.admin-field{
+    border-top: solid 2px #1b80c4;
+}
+
+.adminCont{
+    border-top: ridge 3px white;
+    height: 40vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.adminCont div{
+    border-radius: 4px;
+    border-top: solid 3px #1b80c4;
+    display: inline-block;
+    margin: 10px 10px;
+    width: 30%;
+    background-color: #0795df;
+    height: 15vh;
+}
+
+.adminCont div a{
+    color: black;
+    font-family: "lato";
+    width: 100%;
+    font-weight: 500;
+    text-align: center;
+    background-color: white;
+    border-right: solid 2px;
+    border-left: solid 2px;
+}
+
+
+
+
+.teacher-field{
+    border-top: solid 2px #1b80c4;
+}
+
+.teacherCont{
+    border-top: ridge 3px white;
+    height: 25vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.teacherCont div{
+    border-radius: 4px;
+    border-top: solid 3px #1b80c4;
+    display: inline-block;
+    margin: 10px 10px;
+    width: 30%;
+    background-color: #0795df;
+    height: 15vh;
+}
+
+.teacherCont div a{
+    color: black;
+    font-family: "lato";
+    width: 100%;
+    font-weight: 500;
+    text-align: center;
+    background-color: white;
+    border-right: solid 2px;
+    border-left: solid 2px;
+}
+
+
+
+.student-field{
+    border-top: solid 2px #1b80c4;
+}
+
+.studentCont{
+    border-top: ridge 3px white;
+    height: 40vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.studentCont div{
+    border-radius: 4px;
+    border-top: solid 3px #1b80c4;
+    display: inline-block;
+    margin: 10px 10px;
+    width: 30%;
+    background-color: #0795df;
+    height: 15vh;
+}
+
+.studentCont div a{
+    color: black;
+    font-family: "lato";
+    width: 100%;
+    font-weight: 500;
+    text-align: center;
+    background-color: white;
+    border-right: solid 2px;
+    border-left: solid 2px;
+}

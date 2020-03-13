@@ -1,0 +1,264 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    transition: all 0.5s;
+}
+
+body{
+    background-color: #7395AE;
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+input[type="text"],input[type="submit"], input[type="password"], textarea, select{
+    outline: none;
+}
+
+input, select {
+    background-color: transparent;
+}
+
+header {
+    background-position: center;
+    background-color: #0795df;
+    border-bottom: solid 8px #1b80c4;
+    height: 15vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    height: 130vh;
+}
+
+::placeholder {
+    color: #3E3E3E;
+}
+
+h1{
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+/* ----------------------------- HEADER ----------------------*/
+
+.pageTitle{
+    position: absolute;
+    top: 20px;
+    left: 600px;
+}
+
+.pageTitle p{
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+}
+
+h6{
+    display: none;
+    margin-bottom: 5px;
+    color: red;
+}
+
+p{
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+div{
+    margin: 15px auto;
+    border-radius: 3px;
+}
+
+fieldset{
+    border-color: white;
+    margin: 10px 20px;
+    height: 130vh;
+    border-radius: 10px;
+    background-color: #edededed;
+}
+legend{
+    margin-left: 20px;
+    color: blue;
+}
+.account-ser{
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    width: 16%;
+}
+
+.account-ser a{
+    color: white;
+    font-size: 14px;
+    width: 48%;
+    margin-left: 20px;
+}
+
+.account-ser a:hover{
+    color: red;
+}
+
+.Faculty{
+    position: absolute;
+    right: 30px;
+}
+
+/* ------------------------------ NAV ---------------- */
+
+.recently-info{
+    width: 80%;
+    position: absolute;
+    left: 200px;
+}
+.recently-info h5{
+    margin: 5px 10px;
+    display: inline-block;
+}
+
+.recently-info p{
+    margin: 10px 20px;
+}
+
+.recently-info span{
+    color:#3c8dbc;
+}
+
+.info-adjust{
+    position: absolute;
+    left: 100px;
+    top: 350px;
+    background-color: #0795df;
+    border-radius: 6px;
+    width: 60%; 
+    padding: 20px 20px;
+}
+.info-form-title{
+    padding: 5px 5px;
+    border-bottom: solid 2px black;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.Address{
+    padding: 8px 8px;
+    background-color: white;
+}
+.Address p{
+    border-radius: 6px;
+    padding: 10px 10px;
+    width: 550px;
+    border: double 3px  black;
+    display: inline-block;
+}
+.add-adjust{
+    border-style: none;
+    width: 470px;
+}
+
+
+.Email{
+    padding: 8px 8px;
+    background-color: white;
+}
+.Email p{
+    border-radius: 6px;
+    padding: 10px 10px;
+    width: 550px;
+    border: double 3px  black;
+    display: inline-block;
+}
+.mail-adjust{
+    border-style: none;
+    width: 475px;
+}
+
+
+.Contact{
+    padding: 8px 8px;
+    background-color: white;
+}
+.Contact p{
+    border-radius: 6px;
+    padding: 10px 10px;
+    width: 550px;
+    border: double 3px  black;
+    display: inline-block;
+}
+.contact-adjust{
+    border-style: none;
+    width: 459px;
+}
+
+.searchInput{
+    padding: 8px 8px;
+    /* background-color: white; */
+    width: 100%;
+}
+
+.searchInput p{
+    border-radius: 6px;
+    padding: 10px 10px;
+    width: 40%;
+    border: double 3px  black;
+    display: inline-block;
+    background-color: white;
+}
+
+.findSubjectID, .findSubjectName{
+    /* border-style: none; */
+    width: 60%;
+    height: 35px;
+}
+
+.change-info{
+    cursor: pointer;
+    background-color: white;
+    padding: 15px 15px;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 6px;
+    margin-left: 360px;
+}
+
+.savedSubject, .change-subject{
+    cursor: pointer;
+    background-color: white;
+    padding: 15px 15px;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 6px;
+    margin-right: 160px;
+}
+table {
+    width: 430px;
+    /* font-family: arial, sans-serif; */
+    border-collapse: collapse;
+    table-layout: initial;
+    background-color: #ffffff
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+

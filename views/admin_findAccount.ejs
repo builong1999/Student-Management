@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tìm kiếm tài khoản</title>
+    <link rel="stylesheet" href="/views/resources/css/admin_findAccount.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body id="body">
+    <div class="template">
+        <header class="header-style">
+            <label class="label-click" id="label-click"><i class="fas fa-list-ul"></i></label>
+            <div class="Logo">
+                <a href=""><img class="Logo-img" src="/views/resources/image/Logo.png" alt="Logo"></a>
+            </div>
+            <div class="function-name">
+                <a href="/homepage" id="posName">Phòng đào tạo</a>
+            </div>
+            <div class="regularly-action" id="regularly-action">
+                <a href="/logout"> <span><i class="fas fa-sign-out-alt" style="margin-right: 5px"></i></span> Đăng
+                    xuất</a>
+            </div>
+        </header>
+        <div class="Left" id="Left">
+            <div class="home-page">
+                <a href="/homepage"> <span><i class="fas fa-home"></i></span> <span id="span1"> Trang chủ </span></a>
+            </div>
+
+            <div class="Function">
+                <p class="func-click" id="func-click"> <span><i class="fas fa-radiation-alt"></i></span> <span
+                        id="span2">Công việc</span> </p>
+                <div id="showFunction" style="display: none">
+                    <div class="function-admin" id="function-admin">
+                        <ul>
+                                <li><a href="/management/add">Thêm tài khoản</a></li>
+                                <li><a href="/management/del">Xoá tài khoản</a></li>
+                                <li><a href="/management/find">Tìm kiếm tài khoản</a></li>
+                                <li><a href="/management/renew">Cấp lại mật khẩu</a></li>
+                                <li><a href="/admin/createSubject">Tạo môn học</a></li>
+                                <li><a href="/admin/deleteSubject">Xoá môn học</a></li>
+                                <li><a href="/admin/stopRegSubject">Dừng đăng kí môn học</a></li>
+                                <li><a href="/admin/regsubafter">Đăng kí môn học trễ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="Cpass">
+                <p class="pCPass" id="Cpass"><span><i class="fas fa-key"></i></span><span id="span3">Đổi mật
+                        khẩu</span></p>
+            </div>
+            <div class="About">
+                <p class="pAbout" id="pAbout"> <span><i class="fas fa-question"></i></span> <span id="span4">Thông tin
+                        thêm</span> </p>
+                <div id="aboutShow" style="display: none">
+                    <ul id="admin-about">
+                        <li>Phòng đào tạo thao tác với các tài khoản của hệ thống</li>
+                        <li>Phòng đào tạo chỉnh sửa danh sách lớp học</li>
+                        <li>Phòng đào tạo cấp lại mậu khẩu cho tài khoản</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="disable" id="disable"></div>
+            <div class="work-area">
+                <fieldset class="navSelect" id="navSelect">
+                    <div>
+                        <p>Danh sách tìm kiếm</p>
+                    </div>
+                    <ul>
+                        <p>Tên đăng nhập</p>
+                        <p>Mã số </p>
+                        <p>Chủ tài khoản</p>
+                        <p>Chức vụ</p>
+                        <input type="text" id="userF">
+                        <input type="text" id="idF">
+                        <input type="text" id="hostF">
+                        <input type="text" id="posF">
+                    </ul>
+                    <form action="#" class="addResult" id="addResult">
+                        <table class="tbl" id="tbl">
+                            <%
+                    for (var i = 0; i < length ; i ++){
+                    %>
+                            <tr>
+                                <td> <%= Result[i].username %> </td>
+                                <td> <%= Result[i].ID %></td>
+                                <td> <%= Result[i].Fname %> <%=Result[i].Lname%></td>
+                                <td> <%= Result[i].position %></td>
+                            </tr>
+                            <%
+                    }
+                    %>
+                        </table>
+                    </form>
+                </fieldset>
+                <fieldset class="navDInfo" id="navDInfo">
+                    <div>
+                        <p>Thông tin chi tiết</p>
+                    </div>
+                    <form action="#" class="addInfo" id="addInfo">
+                    </form>
+                </fieldset>
+            </div>
+        </nav>
+    </div>
+    <script src="/views/resources/js/admin_findAccount.js"></script>
+</body>
+
+</html>

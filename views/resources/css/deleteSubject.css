@@ -1,0 +1,89 @@
+.subjectName, .subjectID, .credit, .lesson, .description{
+    width: 85%;
+    border: white;
+    align-content: center;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    outline: none;
+    border-style: none;
+    margin: 4px;
+    box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+  } 
+
+  .credit, .lesson {
+    width: 45%
+  }
+
+  .subjectName, .subjectID, .description{
+    width: 100%
+  }
+
+  .subjectName:focus, .subjectID:focus, .credit:focus, .lesson:focus, .description:focus {
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+    -moz-window-shadow: 0 0 8px #88D5E9; 
+  }
+  
+  .content {
+    margin: 5px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+ .CreditLesson, .Description {
+    width:500px;
+    border-radius: 5px;
+    border: 2px solid #dcdcdc;
+    padding: 5px 5px 5px 5px;
+  }
+
+  .CreditLesson {
+    width: 670px;
+  }
+
+  .Description {
+    width: 670px;
+      
+  }
+
+  .workarea {
+    width: 80vw;
+    margin-left: 290px;
+    margin-top: 90px;
+    display: inline-block;
+  }
+
+  .content {
+    border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 20px;
+      padding-top: 30px;
+      position: relative;
+      width: 70%;
+  }
+  
+  .title-info {
+    position: absolute;
+    top: -15px;
+    left: 25px;
+    min-width: 145px;
+    background: #fff;
+    font-size: 20px;
+    padding-left: 10px;
+    color: #f47724;
+  }
+
+  .deleteBtn {
+    width: 80px;
+    height: 25px;
+    background-color: rgb(151, 1, 1); 
+    color: white; 
+    border: 2px solid rgb(100, 2, 2);
+    border-radius: 5px;
+    float: right;
+    /* margin-bottom: 100%; */
+  }
+  .deleteBtn:hover {
+  background-color: rgb(100, 2, 2);
+  }

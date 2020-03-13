@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+        <script src="/views/resources/js/jquery.min.js"> </script>
+        <script src="/views/resources/js/code.js"></script>
+        <script src="/views/resources/js/editStudentInfo.js"></script>
+
+
+        <link rel="stylesheet" type="text/css" href="/views/resources/css/editTeacherInfo.css">
+        <link rel="stylesheet" type="text/css" href="/views/resources/css/code.css">
+
+        <head>
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+                    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+                <link rel="stylesheet" href="/views/resources/css/Home-page.css">
+                <script src="https://code.jquery.com/jquery-3.4.1.js"
+                    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        </head>
+            
+            <body>
+                <div class="template">
+                    <header class="header-style">
+                        <label class="label-click" id="label-click"><i class="fas fa-list-ul"></i></label>
+                        <div class="Logo">
+                            <a href=""><img class="Logo-img" src="/views/resources/image/Logo.png" alt="Logo"></a>
+                        </div>
+                        <div class="function-name">
+                            <a href="/homepage" id="posName"> Trang chủ</a>
+                        </div>
+                        <div class="regularly-action" id="regularly-action">
+                            <a href="/logout"> <span><i class="fas fa-user" style="margin-right: 5px"></i></span> Đăng xuất</a>
+                        </div>
+                    </header>
+                    <div class="Left" id="Left">
+                        <div class="home-page">
+                            <a href="/homepage"> <span><i class="fas fa-home"></i></span> <span id="span1"> Trang chủ </span></a>
+                        </div>
+            
+                        <div class="Function">
+                            <p class="func-click" id="func-click"> <span><i class="fas fa-radiation-alt"></i></span> <span
+                                    id="span2">Công việc</span> </p>
+                            <div id="showFunction"  style="display: none">
+                                <div class="function-student" id="function-student" style="display: none">
+                                    <ul>
+                                            <li><a href="/student/editStudentInfo">Thông tin cá nhân</a></li>
+                                            <li><a href="/student/coursesinfo">Trang của tôi</a></li>
+                                            <li><a href="/student/grades">Kết quả học tập</a></li>
+                                            <li><a href="/student/resis-course">Đăng ký môn học</a></li>
+                                    </ul>
+                                </div>
+                                <div class="function-teacher" id="function-teacher" style="display: none">
+                                    <ul>
+                                        <li><a href="/teacher/editTeacherInfo">Thông tin cá nhân</a></li>
+                                        <li><a href="/teacher/coursesinfo">Trang của tôi</a></li>
+                                    </ul>
+                                </div>
+                                <div class="function-admin" id="function-admin" style="display: none">
+                                    <ul>
+                                            <li><a href="/management/add">Thêm tài khoản</a></li>
+                                            <li><a href="/management/del">Xoá tài khoản</a></li>
+                                            <li><a href="/management/find">Tìm kiếm tài khoản</a></li>
+                                            <li><a href="/management/renew">Cấp lại mật khẩu</a></li>
+                                            <li><a href="/admin/createSubject">Tạo môn học</a></li>
+                                            <li><a href="/admin/deleteSubject">Xoá môn học</a></li>
+                                            <li><a href="/admin/stopRegSubject">Dừng đăng kí môn học</a></li>
+                                            <li><a href="/admin/regsubafter">Đăng kí môn học trễ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Cpass">
+                            <p class="pCPass" id="Cpass"><span><i class="fas fa-key"></i></span><span id="span3">Đổi mật
+                                    khẩu</span></p>
+                        </div>
+                        <div class="About">
+                            <p class="pAbout" id="pAbout"> <span><i class="fas fa-question"></i></span> <span id="span4">Thông tin
+                                    thêm</span> </p>
+                            <div id="aboutShow" style="display: none">
+                                <ul id="student-about" style="display: none">
+                                    <li>Sinh viên đăng ký môn học khi đợt mở môn học bắt đầu</li>
+                                    <li>Sinh viên xem kết quả học tập hiện tại</li>
+                                    <li>Sinh viên thay đổi thông tin cá nhân khi cần thiết</li>
+                                    <li>Sinh viên sử dụng trang của tôi để coi thông tin các môn học</li>
+                                </ul>
+                                <ul id="teacher-about" style="display:none">
+                                    <li>Giảng viên có thể vô trang của tôi để đưa các thông tin yêu cầu cho lớp mình đang
+                                        dạy</li>
+                                    <li>Giảng viên có thể thay đổi thông tin cá nhân khi cần thiết</li>
+                                </ul>
+                                <ul id="admin-about" style="display:none">
+                                    <li>Phòng đào tạo thao tác với các tài khoản của hệ thống</li>
+                                    <li>Phòng đào tạo chỉnh sửa danh sách lớp học</li>
+                                    <li>Phòng đào tạo cấp lại mậu khẩu cho tài khoản</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <nav>
+                        <div class="workarea">
+                            <div class="recently-info">
+                        
+                            </div>  
+                        </div>
+                    </nav>
+                </div>
+            </body>
+                
+            <script type="text/javascript" src="/views/resources/js/Home-page.js"></script>
+</html>

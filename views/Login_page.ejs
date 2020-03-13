@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TRANG ĐĂNG NHẬP</title>
+    <link rel="stylesheet" href="/views/resources/css/Loginstyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <!-- <div class="Logo"><img class="imgLogo" src="https://upload.wikimedia.org/wikipedia/vi/thumb/c/cd/Logo-hcmut.svg/1004px-Logo-hcmut.svg.png" alt="Logo"></div>
+        <div class="clearfix"></div> -->
+        <nav>
+            <div class="headInfo">
+                <ul class="miniHeadInfo">
+                    <li><a href=""> Giới thiệu</a></li>
+                    <li><a href="">Hướng dẫn sử dụng</a></li>
+                </ul>
+            </div>
+            <div>
+                <form class="Form" action="/login-confirm" method="POST">
+                        <h1 class="smLog">Đăng nhập</h1>
+                    <p id="pAlert">Bạn chưa nhập tên đăng nhập, mật khẩu</p>
+                    <div class="clearfix"></div>
+                    <div class="smAcc">
+                        <span class="input_icn"><em class="user"><i class="fas fa-user-alt"></i></em></span>
+                        <p class="inputText"><input style="border:none" type="text" name="username" id="uname"
+                                placeholder="Tên đăng nhập" maxlength="30" tabindex="1" autocomplete="off"></p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="smPass">
+                        <span class="pass_icn"><em><i class="fas fa-lock"></i></em></span>
+                        <p class="passText"><input style="border:none" type="password" name="password" id="pass"
+                                placeholder="Mật khẩu" maxlength="30" tabindex="2" autocomplete="off"></p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <button type="submit" class="submitBtn" id="submitBtn"> ĐĂNG NHẬP </button>
+                </form>
+            </div>
+        </nav>
+        <script src="/views/resources/js/login.js"></script>
+    </header>
+</body>
+
+</html>

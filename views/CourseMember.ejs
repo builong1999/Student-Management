@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Course name: Danh sách thành viên</title>
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="/views/resources/css/DropDown.css">
+    <link rel="stylesheet" href="/views/resources/css/Home-page.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="header-style">
+        <label class="label-click" id="label-click"><i class="fas fa-list-ul"></i></label>
+        <div class="Logo">
+            <a href=""><img class="Logo-img" src="/views/resources/image/Logo.png" alt="Logo"></a>
+        </div>
+        <div class="function-name">
+            <a href="/homepage" id="posName"> Trang chủ</a>
+            <p>Lớp: <%= Classname;%></p>
+        </div>
+        <div >
+
+        </div>
+        <div class="regularly-action" id="regularly-action">
+            <a href="/logout"> <span><i class="fas fa-user" style="margin-right: 5px"></i></span> Đăng xuất</a>
+        </div>
+    </header>
+
+
+        <div style="margin-top: 18px;"class="Left" id="Left">
+            <div class="home-page">
+                <a href="/homepage"> <span><i class="fas fa-home"></i></span> <span id="span1"> Trang chủ </span></a>
+            </div>
+            <div class="Function">
+                <p class="func-click" id="func-click"> <span><i class="fas fa-radiation-alt"></i></span> <span
+                        id="span2">Công việc</span> </p>
+                <div id="showFunction"  style="display: none">
+                    <div class="function-student" id="function-student" style="display: none">
+                        <ul>
+                                <li><a href="/student/editStudentInfo">Thông tin cá nhân</a></li>
+                                <li><a href="/student/coursesinfo">Trang của tôi</a></li>
+                                <li><a href="/student/grades">Kết quả học tập</a></li>
+                                <li><a href="/student/resis-course">Đăng ký môn học</a></li>
+                        </ul>
+                    </div>
+                    <div class="function-teacher" id="function-teacher" style="display: none">
+                        <ul>
+                            <li><a href="/teacher/editTeacherInfo">Thông tin cá nhân</a></li>
+                            <li><a href="/teacher/coursesinfo">Trang của tôi</a></li>
+                        </ul>
+                    </div>
+                    <div class="function-admin" id="function-admin" style="display: none">
+                        <ul>
+                                <li><a href="/management/add">Thêm tài khoản</a></li>
+                                <li><a href="/management/del">Xoá tài khoản</a></li>
+                                <li><a href="/management/find">Tìm kiếm tài khoản</a></li>
+                                <li><a href="/management/renew">Cấp lại mật khẩu</a></li>
+                                <li><a href="/admin/createSubject">Tạo môn học</a></li>
+                                <li><a href="/admin/deleteSubject">Xoá môn học</a></li>
+                                <li><a href="/admin/stopRegSubject">Dừng đăng kí môn học</a></li>
+                                <li><a href="/admin/regsubafter">Đăng kí môn học trễ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="Cpass">
+                <p class="pCPass" id="Cpass"><span><i class="fas fa-key"></i></span><span id="span3">Đổi mật khẩu</span></p>
+            </div>
+            <div class="CourseTool">
+                <p class="" id=""> <span><i style="padding-left:10px; padding-top:20px; "class="fas fa-question"></i></span> <span id="span3">Điều Hướng</span> </p>
+                <ul id="hideOrShow" style="">
+                  <% if(position=="Student"){%>
+                  <li> <a href="/student/coursesinfo">Trang Của tôi</a> </li>
+                  <%} else{%>
+                    <li> <a href="/teacher/coursesinfo">Trang Của tôi</a> </li>
+                    <%}%>
+                    <li> <a href="CourseMember"> Danh Sách Thành Viên Lớp học</a> </li>
+                    <li> <a href="Course_view">Tài liệu</a> </li>
+                    <%if(position!='Student'){%>
+
+                    <li><div class="dropdown">
+                          <!-- <button class="dropbtn">Nhập điểm</button> -->
+                          <a class="dropbtn">Nhập điểm</a>
+                          <div class="dropdown-content">
+                          <a href="/InputScore">Giữa kỳ</a>
+                          <a href="/Input_Ass">Assignment</a>
+                          <a href="/Input_Fin">Cuối kỳ</a>
+                          </div>
+                        </div>
+                    </li>
+                    <li><a href="/Camthi">Danh Sách Cấm thi Môn học</a></li>
+                    <%}%>
+
+                </ul>
+            </div>
+            <div class="About">
+                <p class="pAbout" id="pAbout"> <span><i class="fas fa-question"></i></span> <span id="span4">Thông tin
+                        thêm</span> </p>
+                <div id="aboutShow" style="display: none">
+                    <ul id="student-about" style="display: none">
+                        <li>Sinh viên đăng ký môn học khi đợt mở môn học bắt đầu</li>
+                        <li>Sinh viên xem kết quả học tập hiện tại</li>
+                        <li>Sinh viên thay đổi thông tin cá nhân khi cần thiết</li>
+                        <li>Sinh viên sử dụng trang của tôi để coi thông tin các môn học</li>
+                    </ul>
+                    <ul id="teacher-about" style="display:none">
+                        <li>Giảng viên có thể vô trang của tôi để đưa các thông tin yêu cầu cho lớp mình đang
+                            dạy</li>
+                        <li>Giảng viên có thể thay đổi thông tin cá nhân khi cần thiết</li>
+                    </ul>
+                    <ul id="admin-about" style="display:none">
+                        <li>Phòng đào tạo thao tác với các tài khoản của hệ thống</li>
+                        <li>Phòng đào tạo chỉnh sửa danh sách lớp học</li>
+                        <li>Phòng đào tạo cấp lại mậu khẩu cho tài khoản</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+          <main>
+
+          <style >
+          h2{
+              display: inline-block;
+          }
+          table {
+            border-collapse: collapse;
+            width: 1000px;
+            border-style: groove;
+          }
+          th, td {
+            text-align: center;
+            padding: 8px;
+            border-style: dotted;
+            border-width: 1px;
+          }
+
+          tr:nth-child(even) {background-color: #f2f2f2;}
+            #content{
+                width:calc(100%-300px)
+                float: right;
+                height:500px;
+
+            }
+            #heading{
+              margin-left: 10px;
+              width:300px;
+              height:500px;
+              background-color:lightBLUE;
+              float:left;
+              border-radius:10px;
+            }
+
+            a{
+              margin-left:2px;
+                text-decoration: none;
+                color:navy;
+            }
+            a:hover{
+
+              border-bottom: 2px solid;
+            }
+            .heardingcontent{
+              padding: 10px 10px 10px 40px;
+              margin-top:10px;
+              color:red;
+            }
+            li{
+              margin-top: 20px;
+            }
+            .Members{
+              width:calc(100%-300px)
+              padding-left=300px;
+            }
+            .space{
+              margin-top: 20px;
+              margin-left: 320px;
+            }
+            .somebig{
+
+            }
+            .headInfo{
+                /*float:right;
+                margin-top: -150px;*/
+                float:right;
+                margin-top: -20px;
+                margin-right:1000px;
+            }
+            .somespace4test{
+              padding: 5px 5px 5px 5px;
+              text-align: center;
+            }
+          </style>
+          <div class="somebig">
+
+            <div class="space">
+
+              <div class="Members">
+
+                <!-- <form class="" action="/CourseMember" method="post"> -->
+
+                <!-- </form> -->
+              </div>
+              <div class="SortbyName">
+
+              </div>
+              <div id="content" class="CouseMemberMenu" >
+                <p style=" margin-top:90px; margin-bottom:10px;">Giáo viên phụ trách:   <%= rows[0].Fname%>  <%= rows[0].Lname %> </p>
+                <p style="display: inline-block;margin-left:0px;"> Tên: </p>
+
+                <a href="/CourseMember">Tất cả</a>
+                <a href="/SortByName/A">A</a>
+                <a href="/SortByName/Ă">Ă</a>
+                <a href="/SortByName/Â">Â</a>
+                <a href="/SortByName/B">B</a>
+                <a href="/SortByName/C">C</a>
+                <a href="/SortByName/D">D</a>
+                <a href="/SortByName/Đ">Đ</a>
+                <a href="/SortByName/E">E</a>
+                <a href="/SortByName/Ê">Ê</a>
+                <a href="/SortByName/F">F</a>
+                <a href="/SortByName/G">G</a>
+                <a href="/SortByName/H">H</a>
+                <a href="/SortByName/I">I</a>
+                <a href="/SortByName/J">J</a>
+                <a href="/SortByName/K">K</a>
+                <a href="/SortByName/L">L</a>
+                <a href="/SortByName/M">M</a>
+                <a href="/SortByName/N">N</a>
+                <a href="/SortByName/O">O</a>
+                <a href="/SortByName/Ô">Ô</a>
+                <a href="/SortByName/Ơ">Ơ</a>
+                <a href="/SortByName/P">P</a>
+                <a href="/SortByName/Q">Q</a>
+                <a href="/SortByName/R">R</a>
+                <a href="/SortByName/S">S</a>
+                <a href="/SortByName/T">T</a>
+                <a href="/SortByName/U">U</a>
+                <a href="/SortByName/Ư">Ư</a>
+                <a href="/SortByName/V">V</a>
+                <a href="/SortByName/W">W</a>
+                <a href="/SortByName/X">X</a>
+                <a href="/SortByName/Y">Y</a>
+                <a href="/SortByName/Z">Z</a>
+
+                <table style="overflow-x:auto;">
+                  <thead>
+                    <caption style="color: red; font-size: 40px;" >Danh sách thành viên</caption>
+                    <tr>
+                      <td style="font-weight: bold;">ID</td>
+                      <td style="font-weight: bold;">MSSV</td>
+                      <td style="font-weight: bold;">Fname</td>
+                      <td style="font-weight: bold;">Lname</td>
+                      <td style="font-weight: bold;"  >Email</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <form class="" action="/CourseMember" method="post">
+                      <% for (var i=0; i<count;i++) {%>
+                        <tr>
+                          <td > <%= i+1 %></td>
+                          <td > <%=rows2[i].ID %></td>
+                          <td > <%=rows2[i].Fname %></td>
+                          <td > <%=rows2[i].Lname %></td>
+                          <td > <%=rows2[i].Email %></td>
+                        </tr>
+                      <%}%>
+                    </form>
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+
+          </div>
+
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+  <script src="/views/resources/js/Home-page.js"></script>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Điều chỉnh thông tin</title>
+    <link rel="stylesheet" href="/views/resources/css/student_adjust-info.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body id="body">
+    <div class="template">
+        <header class="header-style">
+            <label class="label-click" id="label-click"><i class="fas fa-list-ul"></i></label>
+            <div class="Logo">
+                <a href=""><img class="Logo-img" src="/views/resources/image/Logo.png" alt="Logo"></a>
+            </div>
+            <div class="function-name">
+                <a href="/homepage" id="posName">Phòng đào tạo</a>
+            </div>
+            <div class="regularly-action" id="regularly-action">
+                <a href="/logout"> <span><i class="fas fa-sign-out-alt" style="margin-right: 5px"></i></span> Đăng
+                    xuất</a>
+            </div>
+        </header>
+        <div class="Left" id="Left">
+            <div class="home-page">
+                <a href="/homepage"> <span><i class="fas fa-home"></i></span> <span id="span1"> Trang chủ </span></a>
+            </div>
+
+            <div class="Function">
+                <p class="func-click" id="func-click"> <span><i class="fas fa-radiation-alt"></i></span> <span
+                        id="span2">Công việc</span> </p>
+                <div id="showFunction" style="display: none">
+                    <div class="function-admin" id="function-admin">
+                        <ul>
+                            <li><a href="/student/info">Thông tin cá nhân</a></li>
+                            <li><a href="">Trang của tôi</a></li>
+                            <li><a href="">Kết quả học tập</a></li>
+                            <li><a href="">Đăng ký môn học</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="Cpass">
+                <p class="pCPass" id="Cpass"><span><i class="fas fa-key"></i></span><span id="span3">Đổi mật
+                        khẩu</span></p>
+            </div>
+            <div class="About">
+                <p class="pAbout" id="pAbout"> <span><i class="fas fa-question"></i></span> <span id="span4">Thông tin
+                        thêm</span> </p>
+                <div id="aboutShow" style="display: none">
+                    <ul id="student-about">
+                        <li>Sinh viên đăng ký môn học khi đợt mở môn học bắt đầu</li>
+                        <li>Sinh viên xem kết quả học tập hiện tại</li>
+                        <li>Sinh viên thay đổi thông tin cá nhân khi cần thiết</li>
+                        <li>Sinh viên sử dụng trang của tôi để coi thông tin các môn học</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="disable" id="disable"></div>
+            <div class="work-area">
+                <div class="recently-info">
+                    <h5 class="full-name"> Họ tên: <span
+                            id="span-name">  <%- Result[0].Fname + " " + Result[0].Lname%></span> </h5>
+                    <h5 class="Faculty"> Khoa theo học: <span id="span-faculty"><%-Result[0].Faculty%></span></h5>
+                    <div class="clearfix"></div>
+                    <p class="student-id">Mã số sinh viên: <span id="span-id"><%-Result[0].ID%></span></p>
+                    <p class="DOB">Ngày sinh: <span id="span-DOB"><%-Result[0].DOB%></span></p>
+                    <p class="mail">Email: <span id="span-mail"><%-Result[0].Email%></span> </p>
+                    <p class="recently-address">Địa chỉ hiện tại: <span id="span-address"><%-Result[0].Address%></span></p>
+                    <p class="contact">Liên lạc: <span id="span-contact"><%-Result[0].Contact%></span></p> 
+                </div>
+                <div class="info-adjust">
+                    <div class="info-form-title">
+                       Điều chỉnh thông tin
+                    </div>
+                    <form action="/student/info" method="POST">
+                        <div class="Address"><span>Địa chỉ:</span><input type="text" id="address-adjust" class="add-adjust" maxlength="200"
+                                    name="Address" value="<%-Result[0].Address%>">
+                            <h6 id="address-check">Bạn chưa điền thông tin</h6>
+                        </div>
+                        <div class="Email">
+                            <span>Email:</span>  <input type="text" id="mail-adjust" class="mail-adjust" maxlength="30"
+                                    name="Email" value="<%-Result[0].Email%>">
+                            <h6 id="email-check">Bạn chưa điền thông tin</h6>
+                        </div>
+                        <div class="Contact">
+                            <span>Liên lạc:</span> <input type="text" id="contact-adjust" class="contact-adjust" maxlength="13"
+                                    name="Contact" value="<%-Result[0].Contact%>">
+                            <h6 id="contact-check">Bạn chưa điền thông tin</h6>
+                        </div>
+                        <div class="Validate">
+                            <input type="Submit" class="change-info" id="change-info" value="Lưu thông tin">
+                        </div>
+                    </form>
+                </div>
+                <div></div>
+            </div>
+        </nav>
+    </div>
+    <script src="/views/resources/js/student_adjust-info.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ĐĂNG KÝ MÔN HỌC</title>
+    <link rel="stylesheet" href="/views/resources/css/dkmh.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="header">
+        <img class="logo" src="/views/resources/image/Logo.png" alt="photo">
+        <h1>ĐĂNG KÝ MÔN HỌC</h1>
+
+        <ul class="main1">
+            <li><a href="/logout"><span><i class="fas fa-sign-out-alt"></i></span> <span>ĐĂNG XUẤT</a></li>
+        </ul>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div>
+        <ul class="main2">
+            <li id="home"><a href="/homepage"><span><i class="fas fa-home"></i></span> <span>Trang chủ</a></li>
+            <li id="dk"><a href="/student/resis"><span><i class="fas fa-edit"></i></span> <span>Đăng ký môn học</a></li>
+            <li id="xmh"><a href="/student/view-course"><span><i class="far fa-eye"></i></span> <span>Xem môn học đã đăng ký</a></li>
+            <li id="Cpass"><a href="#"><span><i class="fas fa-key"></i></span> <span>Đổi mật khẩu</a></l  i>
+        </ul>
+    </div>
+    <div class="content">
+        <p class="text">Chọn môn học đăng ký</p>
+        
+        <form action="/student/resis-search" method="POST" id="form">
+            <input type="text" placeholder="Mã môn học/Tên môn học" name="submit" id="txt">
+            <input type="submit" value="search" id="btn">
+        </form>
+        <div style="overflow:auto" id="table">
+            <form action="/student/resis-done" method="POST" id="form-nav">
+                <input type="text" id="text" name="txt" style="display: none">
+                <% if (count=="0") {%>
+                <p>Không tìm thấy</p>
+                <%}else{%>
+                <table id="tb" border="2px" style="text-align:center;">
+                    <tr style="background-color:rgb(37, 143, 235);color:white">
+                        <th>MSMH</th>
+                        <th>Tên môn học</th>
+                        <th>Số TC</th>
+                        <th>Số tiết</th>
+                        <th>Miêu tả</th>
+                        <th></th>
+                    </tr>
+                    <%for (var i=0; i< count;i++){%>
+                    <tr>
+                        <td><%-data[i].courseID%></td>
+                        <td><%-data[i].courseName%></td>
+                        <td><%-data[i].courseCredit%></td>
+                        <td><%-data[i].courseLesson%></td>
+                        <td><%-data[i].courseDescription%></td>
+                        <%var check=0%>
+                        <%for (var j=0; j< countCheck;j++){%>
+                            <%if (data[i].courseID.trim() == dataCheck[j].courseID && tempID == dataCheck[j].studentID)  {%>
+                                    <%check++%>
+                                <%}%>
+                        <%}%>
+                        <% if (check==0) {%>
+                        <td><button id="chon">Chọn</button></td>
+                        <%}else {%>
+                        <td><button id="dk">Đã đăng ký</button></td>
+                        <%}%>
+                    </tr>
+                    <%}%>
+                    </table>
+                    <button id="bt" class="fixed">Đăng ký</button>
+                    <%}%>
+
+
+                    <script type="text/javascript">
+                        var tb = document.querySelector('table');
+                        var btn = document.getElementById("bt");
+                        var k = 0;
+                        var txt = "";
+
+                        for (var j = 1; j < tb.rows.length; j++) {
+                            tb.rows[j].onclick = function () {
+                                if (this.cells[5].textContent=="Chọn") {
+                                    this.deleteCell(5);
+                                }
+                                txt += this.cells[0].textContent + ",";
+                                k++;
+                                console.log(txt);
+                            };
+                        }
+                        
+                        btn.onclick = function () {
+                            var a = document.getElementById("text");
+                            a.value = txt;
+                        }
+                    </script>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="/views/resources/js/dmk.js"></script>
+</html>

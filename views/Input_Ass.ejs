@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Course name: Danh sách thành viên</title>
+    <!-- <link rel="stylesheet" href="./resources/css/style.css"> -->
+    <link rel="stylesheet" href="/views/resources/css/DropDown.css">
+    <link rel="stylesheet" href="/views/resources/css/Home-page.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="header-style">
+        <label class="label-click" id="label-click"><i class="fas fa-list-ul"></i></label>
+        <div class="Logo">
+            <a href=""><img class="Logo-img" src="/views/resources/image/Logo.png" alt="Logo"></a>
+        </div>
+        <div class="function-name">
+            <a href="/homepage" id="posName"> Trang chủ</a>
+            <p>Lớp: <%= Classname;%></p>
+        </div>
+        <div class="regularly-action" id="regularly-action">
+            <a href="/logout"> <span><i class="fas fa-user" style="margin-right: 5px"></i></span> Đăng xuất</a>
+        </div>
+    </header>
+
+
+        <div style="margin-top: 18px;" class="Left" id="Left">
+            <div class="home-page">
+                <a href="/homepage"> <span><i class="fas fa-home"></i></span> <span id="span1"> Trang chủ </span></a>
+            </div>
+            <div class="Function">
+                <p class="func-click" id="func-click"> <span><i class="fas fa-radiation-alt"></i></span> <span
+                        id="span2">Công việc</span> </p>
+                <div id="showFunction"  style="display: none">
+                    <div class="function-student" id="function-student" style="display: none">
+                        <ul>
+                            <li><a href="/student/info">Thông tin cá nhân</a></li>
+                            <li><a href="/student/coursesinfo">Trang của tôi</a></li>
+                            <li><a href="">Kết quả học tập</a></li>
+                            <li><a href="/student/resis-course">Đăng ký môn học</a></li>
+                        </ul>
+                    </div>
+                    <div class="function-teacher" id="function-teacher" style="display: none">
+                        <ul>
+                            <li><a href="/teacher/info">Thông tin cá nhân</a></li>
+                            <li><a href="/teacher/coursesinfo">Trang của tôi</a></li>
+                        </ul>
+                    </div>
+                    <div class="function-admin" id="function-admin" style="display: none">
+                        <ul>
+                            <li><a href="/management/add">Thêm tài khoản</a></li>
+                            <li><a href="/management/del">Xoá tài khoản</a></li>
+                            <li><a href="/management/find">Tìm kiếm tài khoản</a></li>
+                            <li><a href="/management/renew">Cấp lại mật khẩu</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="Cpass">
+                <p class="pCPass" id="Cpass"><span><i class="fas fa-key"></i></span><span id="span3">Đổi mật khẩu</span></p>
+            </div>
+            <div class="CourseTool">
+                <p class="" id=""> <span><i style="padding-left:10px; padding-top:20px;" class="fas fa-question"></i></span> <span id="span3">Điều Hướng</span> </p>
+                <ul id="hideOrShow" style="">
+                  <% if(position=="Student"){%>
+                  <li> <a href="/student/coursesinfo">Trang Của tôi</a> </li>
+                  <%} else{%>
+                    <li> <a href="/teacher/coursesinfo">Trang Của tôi</a> </li>
+                    <%}%>
+                    <li> <a href="CourseMember"> Danh Sách Thành Viên Lớp học</a> </li>
+                    <li> <a href="Course_view">Tài liệu</a> </li>
+                    <%if(position!='Student'){%>
+
+                    <li><div class="dropdown">
+                          <!-- <button class="dropbtn">Nhập điểm</button> -->
+                          <a class="dropbtn">Nhập điểm</a>
+                          <div class="dropdown-content">
+                          <a href="/InputScore">Giữa kỳ</a>
+                          <a href="/Input_Ass">Assignment</a>
+                          <a href="/Input_Fin">Cuối kỳ</a>
+                          </div>
+                        </div>
+                    </li>
+                    <li><a href="/Camthi">Danh Sách Cấm thi Môn học</a></li>
+                    <%}%>
+
+                </ul>
+            </div>
+            <div class="About">
+                <p class="pAbout" id="pAbout"> <span><i class="fas fa-question"></i></span> <span id="span4">Thông tin
+                        thêm</span> </p>
+                <div id="aboutShow" style="display: none">
+                    <ul id="student-about" style="display: none">
+                        <li>Sinh viên đăng ký môn học khi đợt mở môn học bắt đầu</li>
+                        <li>Sinh viên xem kết quả học tập hiện tại</li>
+                        <li>Sinh viên thay đổi thông tin cá nhân khi cần thiết</li>
+                        <li>Sinh viên sử dụng trang của tôi để coi thông tin các môn học</li>
+                    </ul>
+                    <ul id="teacher-about" style="display:none">
+                        <li>Giảng viên có thể vô trang của tôi để đưa các thông tin yêu cầu cho lớp mình đang
+                            dạy</li>
+                        <li>Giảng viên có thể thay đổi thông tin cá nhân khi cần thiết</li>
+                    </ul>
+                    <ul id="admin-about" style="display:none">
+                        <li>Phòng đào tạo thao tác với các tài khoản của hệ thống</li>
+                        <li>Phòng đào tạo chỉnh sửa danh sách lớp học</li>
+                        <li>Phòng đào tạo cấp lại mậu khẩu cho tài khoản</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+          <main>
+            <style >
+            h2{
+                display: inline-block;
+            }
+            table {
+              border-collapse: collapse;
+              width: 1000px;
+              border-style: groove;
+
+
+            }
+            th, td {
+              text-align: center;
+              padding: 8px;
+              border-style: dotted;
+              border-width: 1px;
+            }
+            tr:nth-child(even) {background-color: #f2f2f2;}
+              /* #content{
+                  width:calc(100%-300px);
+                  float: right;
+                  height:500px;
+              } */
+              #heading{
+                margin-left: 10px;
+                width:300px;
+                height:500px;
+                background-color:lightBLUE;
+                float:left;
+                border-radius:10px;
+              }
+              a{
+                  text-decoration: none;
+                  color:navy;
+              }
+              a:hover{
+                border-bottom: 2px solid;
+              }
+              .heardingcontent{
+                padding: 10px 10px 10px 40px;
+                margin-top:10px;
+                color:red;
+              }
+              li{
+                margin-top: 20px;
+              }
+              .Members{
+                width:calc(100%-300px)
+                padding-left=300px;
+              }
+              .space{
+                margin-top: 20px;
+                margin-left: 320px;
+              }
+              .headInfo{
+                  /*float:right;
+                  margin-top: -150px;*/
+                  float:right;
+                  margin-top: -20px;
+                  margin-right:1000px;
+              }
+              .somespace4test{
+                padding: 5px 5px 5px 5px;
+                text-align: center;
+              }
+              .submitBtn_Bao{
+                  text-decoration: none;
+                  text-align: center;
+                  font-size: 110%;
+                  background-color: grey;
+                  margin-top: 20px;
+                  width: 200px;
+                  float:right;
+                  margin-right: 35px;
+                  padding: 10px 10px;
+                  border-radius: 10px;
+                  color: white;
+                  font-weight: 600;
+              }
+              .submitBtn_Bao:hover{
+                  background-color: darkgrey;
+              }
+            </style>
+          <div class="somebig">
+            <!--<div id="heading" class="CourseMenu">
+              <h2 style="text-align:center;">Điều hướng</h2>
+              <ul>
+                <li ><a href="helloworld.html">Trang của tôi</a></li>
+                <li ><a href="Course_view.html">Tài liệu khoá học</a></li>
+                <li ><a href="Course_member.html">Danh sách thành viên</a></li>
+              </ul>
+            </div>-->
+
+            <div class="space">
+              <div class="Members">
+
+
+
+                <script type="text/javascript">
+                    function validate(evt) {
+                      var theEvent = evt || window.event;
+                      // Handle paste
+                      if (theEvent.type === 'paste') {
+                          //key = event.clipboardData.getData('text/plain');
+                      } else {
+                      // Handle key press
+                          var key = theEvent.keyCode || theEvent.which;
+                          key = String.fromCharCode(key);
+                      }
+                      var regex = /[0-9]|\./;
+                      if( !regex.test(key) ) {
+                        if(parseFloat(key)>10.00 || parseFloat(key) <0.00)
+                        {
+                          alert("Invalid number");
+                        }
+                        theEvent.returnValue = false;
+                        if(theEvent.preventDefault) theEvent.preventDefault();
+                      }
+                      else {
+                        if(parseFloat(key)>10.00 || parseFloat(key) <0.00)
+                        {
+                          window.alert("Invalid number");
+                        }
+                      }
+                    }
+              </script>
+
+              <script>
+                function exportToExcel(tableID)
+                {
+                  var tab_text="<table border='2px'><tr bgcolor='#87AFC6' style='height: 75px; text-align: center; width: 250px'>";
+                  var textRange; var j=0;
+                  tab = document.getElementById(tableID); // id of table
+                  for(j = 0 ; j < tab.rows.length ; j++)
+                  {
+                      tab_text=tab_text;
+                      tab_text=tab_text+tab.rows[j].innerHTML.toUpperCase()+"</tr>";
+                  }
+                  tab_text= tab_text+"</table>";
+                  tab_text= tab_text.replace(/<A[^>]*>|<\/A>/g, "");
+                  tab_text= tab_text.replace(/<img[^>]*>/gi,"");
+                  tab_text= tab_text.replace(/<input[^>]*>|<\/input>/gi, "");
+                  sa = window.open('data:application/vnd.ms-excel,' + encodeURIComponent(tab_text));
+                  return (sa);
+              }
+              </script>
+                </div>
+              <div id="content" class="CouseMemberMenu" >
+                <table style="overflow-x:auto;margin-top: 100px;" id="tabAss_Score" >
+                  <thead>
+                    <caption style="color: red; font-size:40px;">Bảng điểm Bài tập lớn</caption>
+                    <tr>
+                      <td>ID</td>
+                      <td>Fname</td>
+                      <td>Lname</td>
+                      <td>MSSV</td>
+                      <td>Score</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <form action="/SaveNewAss" method="post" autocomplete="off">
+                  <% for(var i=0;i<count;i++){%>
+                    <tr>
+                      <td><%=i+1 %></td>
+                      <td><%=Data[i].Fname %></td>
+                      <td><%=Data[i].Lname %></td>
+                      <td><%=Data[i].ID %></td>
+                      <td>
+                        <span class="input_icn"><em class="user"><i class="fas fa-user-alt"></i></em></span>
+                        <input style="font-size:25px;" type="text" name="<%=Data[i].ID%>" placeholder="<%=Data[i].Assignment %>">
+                      </td>
+                        </tr>
+                    <%}%>
+                    <button style="margin-top: 100px;" type="submit"  class="submitBtn_Bao"name="key" >Save</button>
+                    <button style="margin-top: 100px;" type="Cancel" class="submitBtn_Bao"name="Cancel">Canel</button>
+                    <!-- <button style="margin-top: 100px;" type="button" class="submitBtn" name="button" onclick="exportToExcel('tabAss_Score')">Export</button> -->
+                    </form>
+                      </tbody>
+                  </table>
+
+
+
+              </div>
+          </div>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+  <script src="/views/resources/js/Home-page.js"></script>
+
+</html>

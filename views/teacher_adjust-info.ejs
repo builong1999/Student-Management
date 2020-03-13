@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Điều chỉnh thông tin</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+    <link rel="stylesheet" href="/views/resources/css/teacher_adjust-info.css">
+</head>
+
+<body>
+    <header>
+        <div class="pageTitle">
+            <p>ĐIỀU CHỈNH THÔNG TIN</p>
+        </div>
+        <div class="account-ser" id="account-ser">
+                <a href="#" id="cPass">Đổi mật khẩu</a>
+                <a href="/logout" class="Logout">Đăng xuất</a>
+        </div>
+    </header>
+    <!-- --------------------------------------------------------------- -->
+    <nav>
+        <fieldset>
+            <div class="recently-info">
+                <h5 class="full-name"> Họ và tên: <span id="span-name"><%- Result[0].Fname + " " + Result[0].Lname%></span> </h5>
+                <h5 class="Faculty"> Khoa theo học: <span id="span-faculty"><%-Result[0].Faculty%></span></h5>
+                <div class="clearfix"></div>
+                <p class="DOB">Ngày sinh: <span id="span-DOB"><%-Result[0].DOB%></span></p>
+                <p class="mail">Email: <span id="span-mail"><%-Result[0].Email%></span> </p>
+                <p class="recently-address">Địa chỉ hiện tại: <span id="span-address"><%-Result[0].Address%></span></p>
+                <p class="contact">Liên lạc: <span id="span-contact"><%-Result[0].Contact%></span></p>
+            </div>
+            <div class="info-adjust">
+                <div class="info-form-title">
+                    Thông tin cá nhân
+                </div>
+                <form action="/student/info" method="POST">
+                <div class="Address">
+                    <p>Địa chỉ:<input type="text" id="address-adjust" class="add-adjust" maxlength="200" name="Address"></p>
+                    <h6 id="address-check">Bạn chưa điền thông tin</h6>
+                </div>
+                <div class="Email">
+                    <p>Email: <input type="text" id="mail-adjust" class="mail-adjust" maxlength="30" name="Email"></p>
+                    <h6 id="email-check">Bạn chưa điền thông tin</h6>
+                </div>
+                <div class="Contact">
+                    <p>Liên lạc: <input type="text" id="contact-adjust" class="contact-adjust" maxlength="13" name="Contact"></p>
+                    <h6 id="contact-check">Bạn chưa điền thông tin</h6>
+                </div>
+                <div class="Validate">
+                    <input type="Submit" class="change-info" id="change-info" value="Lưu thông tin">
+                </div>
+            </form>
+            </div>
+        </fieldset>
+    </nav>
+    <script src="/views/resources/js/teacher_adjust-info.js"></script>
+</body>
+
+</html>

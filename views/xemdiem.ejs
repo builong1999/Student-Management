@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-child {
+            display: none;
+            background-color: black;
+            min-width: 100px;
+        }
+
+        .dropdown-child a {
+            color: whitesmoke;
+            padding: 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-child {
+            display: block;
+        }
+    </style>
+    <title>
+        Bảng điểm sinh viên
+    </title>
+    <style>
+        body {
+            background-image: linear-gradient(#557A95, #7395AE);
+            background-position: center;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./anh2.png">
+    <h1>
+        <center>BẢNG ĐIỂM SINH VIÊN</center>
+        <script type="text/javascript">
+          //var Dclass=window.localStorage.getItem('Dclass');
+          var Dclass=2;
+          console.log(Dclass);
+          document.writes(Dclass);
+          document.getElementById("demo").innerHTML=Dclass;
+          console.log(Dclass)
+        </script>
+        include ('Course_view.php');
+        <%
+        var test = 101;
+        //  var Dclass=window.localStorage.getItem('Dclass');
+        //$DClass;
+         %> // variable created by ejs
+        <script>
+           var getTest = <%= test  %>;  //var test is now assigned to getTest which will only work on browsers
+           console.log(getTest);  // successfully prints 101 on browser
+           console.log(Dclass)
+        </script>
+
+    </h1>
+    <p id="demo">feaw</p>
+    <div class="">
+        <a href="/LoginDemo/index.php">index</a>
+    </div>
+    <div class="dropdown">
+        <button class="mainmenubtn">Học kì</button>
+        <div class="dropdown-child">
+            <a href="#">Học kì 181</a>
+            <a href="#">Học kì 182</a>
+        </div>
+    </div>
+    <div class="container">
+        <table border="1" width="800" height="100" class="table table-hover">
+            <tr>
+                <td>
+                    <center><b>MÃ MÔN HỌC</b></center>
+                </td>
+                <td>
+                    <center><b>TÊN MÔN HỌC</b></center>
+                </td>
+                <td>
+                    <center><b>ĐIỂM THÀNH PHẦN</b></center>
+                </td>
+                <td>
+                    <center><b>ĐIỂM TỔNG KẾT</b></center>
+                </td>
+            </tr>
+            <% for (var i=0; i<count;i++) {%>
+
+            <tr>
+                <td><%= data[i].ClassCode %></td>
+                <td><%= data[i].ClassName %></td>
+                <td>GK:<%= data[i].Mid_Score %>,BTL:<%= data[i].Assignment %>,CK:<%= data[i].Fin_Score %></td>
+                <td><%= data[i].diemTK %></td>
+            </tr>
+
+            <%}%>
+        </table>
+    </div>
+        <p>Điểm trung bình học kì:</p>
+        <p>Điểm trung bình tích lũy:</p>
+    </body>
+</html>

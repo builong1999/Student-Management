@@ -1,0 +1,378 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+    transition: all 0.5s;
+}
+
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+input[type="text"], input[type="password"], textarea, select {
+    outline: none;
+}
+
+input, select {
+    background-color: transparent;
+}
+
+header {
+    background-position: center;
+    background-color: #0795df;
+    border-bottom: solid 8px #1b80c4;
+    height: 12vh;
+}
+
+
+
+nav{
+    background-color: #eff0f2;
+    height: 120vh;
+}
+
+::placeholder{
+    color: #3E3E3E;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    color: black;
+    text-align: center;
+}
+
+/* ------------------------------------------------TEMPLATE---------------------------------- */
+
+.ul1, .ul2 {
+    font-size: 18px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    margin-left: 40px;
+}
+
+.ul1 li, .ul2 li {
+    padding: 5px 10px;
+    list-style: none;
+    font-size: 15px;
+}
+
+.ul1 li:hover {
+    background-color: #dcdcdc;
+}
+
+.template a {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+}
+
+.label-click {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    border-radius: 25px;
+    left: 40px;
+    transition: all 0.2s;
+    padding: 14px 0px;
+    padding-left: 8px;
+}
+
+.Logo {
+    position: absolute;
+    top: 10px;
+    left: 150px;
+}
+
+.Logo-img {
+    width: 60px;
+}
+
+i {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.header-style {
+    position: fixed;
+    top: 0px;
+    width: 98.9vw;
+    height: 8vh;
+    background-color: #ffffff;
+    border-bottom: solid 4px #f3f3f3;
+}
+
+.function-name {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+}
+
+.regularly-action {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 30px;
+}
+
+.regularly-action a {
+    font-family: 'Roboto';
+    border: ridge 1px #0795df;
+    color: #0795df;
+    padding: 5px 5px;
+    border-radius: 3px;
+}
+
+.Left {
+    top: 61px;
+    position: fixed;
+    background-color: #f5f5f5;
+    width: 280px;
+    height: 91vh;
+}
+
+.Left div {
+    width: 90%;
+}
+
+nav {
+    margin-top: 61px;
+    background-color: #fafafa;
+    width: 98.9vw;
+    height: 110vh;
+}
+
+.home-page {
+    cursor: pointer;
+    padding: 20px 0px;
+    border-bottom: solid 2px #dcdcdc;
+    margin-left: 5%;
+}
+
+.home-page:hover {
+    background-color: #dcdcdc;
+}
+
+.Function {
+    cursor: pointer;
+    border-bottom: solid 2px #dcdcdc;
+    margin-left: 5%;
+}
+
+.func-click {
+    border-bottom: solid 1px #dcdcdc;
+    padding: 20px 0px;
+}
+
+.func-click:hover {
+    background-color: #dcdcdc;
+}
+
+
+.Cpass {
+    cursor: pointer;
+    border-bottom: solid 2px #dcdcdc;
+    margin-left: 5%;
+}
+
+.pCPass {
+    border-bottom: solid 1px #dcdcdc;
+    padding: 20px 0px;
+}
+
+.pCPass:hover {
+    background-color: #dcdcdc;
+}
+.About {
+    cursor: pointer;
+    border-bottom: solid 2px #dcdcdc;
+    margin-left: 5%;
+}
+
+.pAbout {
+    border-bottom: solid 1px #dcdcdc;
+    padding: 20px 0px;
+}
+
+.pAbout:hover {
+    background-color: #dcdcdc;
+}
+
+.work-area {
+    width: 80vw;
+    margin-left: 290px;
+    display: inline-block;
+}
+
+.divTitle {
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: solid 1px #dcdcdc;
+}
+
+.function div {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 16px;
+    padding: 10px 40px;
+}
+
+.disable {
+    position: absolute;
+    width: 82vw;
+    height: 100vh;
+    left: 260px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------------------------------------------------------------------ */
+.listAccount{
+    border: ridge 2px #f3f3f3;
+    background-color: white;
+    width: 800px;
+    margin-left: 40px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.listAccount div{
+    width: 100%;
+    border-bottom: solid 2px black;
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+    color: #1b80c4;
+}
+
+.valueText{
+    font-weight: 700;
+    padding-left: 220px;
+    background-color: white;
+    margin-left: 20px;
+    width: 95.5%;
+    border-radius: 10px;
+}
+
+.ul3{
+    margin-left: -20px;
+}
+
+.tbl{
+    background-color: #cccccc;
+    border: solid 1px black;
+    border-spacing: 1px 1px;
+}
+
+.tbl tr{
+    background-color: white;
+    transition: all 0.05s;
+    cursor: pointer;
+}
+
+.tbl tr :hover{
+    padding: 8px 8px;
+}
+
+.tbl tr td{
+    font-size: 16px;
+    width: 200px;
+    text-align:center;
+}
+.listForm{
+    width: 800px;
+    height: 550px;
+    margin-left: 20px;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+
+.countP{
+    margin-left: 40px;
+
+    display: inline-block;
+}
+
+
+.listDel{
+    display: none;
+    float: right;
+    margin-top: 10px;
+    margin-right:200px;
+    border-radius: 3px;
+    border: inset 1px #dcdcdc;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.listDel legend{
+    border-style: none;
+}
+
+.ul3 li{
+    list-style: none;
+    display: inline-block;
+    width: 23.95%;
+    font-size: 18px;
+    text-align: center;
+}
+.formDel{
+    width: 220px;
+    height: 610px;
+    overflow: auto;
+}
+
+
+.delTbl{
+    border-spacing: 1px 1px;
+}
+
+.delTbl div{
+    margin-left: 2px;
+    padding: 3px 3px;
+    width: 200px;
+}
+
+.delTbl tr{
+    display: inline-block;
+    background-color: white;
+    transition: all 0.2s;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    overflow: auto;
+    margin-bottom: 2px;
+}
+
+.col1{
+    font-size: 14px;
+    background-color: #cccccc;
+    border-radius: 10px;
+    width: 30px;
+    margin-left: 20px;
+}
+.col2{
+    width: 150px;
+}
+
+.lSubmit{
+    color: #1b80c4;
+    border: solid 1px #1b80c4;
+    padding: 5px 5px;
+    cursor: pointer;
+    float: right;
+    transition: all 0.5s;
+}
+
+.lSubmit:hover{
+    color: red;
+    border: solid 2px grey;
+}

@@ -1,0 +1,289 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    transition: all 0.5s;
+}
+
+body{
+    background-color: #7395AE;
+}
+
+* {
+    /* padding: 0px; */
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+input[type="text"],input[type="submit"], input[type="password"], textarea, select{
+    outline: none;
+}
+
+input, select {
+    background-color: transparent;
+}
+
+header {
+    background-position: center;
+    background-color: #42b0f4;
+    border-bottom: solid 8px #426ef4;
+    height: 15vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    height: 130vh;
+}
+
+::placeholder {
+    color: #3E3E3E;
+}
+
+h1{
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+/* ----------------------------- HEADER ----------------------*/
+
+.pageTitle{
+    position: absolute;
+    top: 20px;
+    left: 580px;
+}
+
+.pageTitle p{
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+}
+
+h6{
+    display: none;
+    margin-bottom: 5px;
+    color: red;
+}
+
+p{
+    font-size: 16px;
+}
+
+
+div{
+    margin: 15px auto;
+    border-radius: 3px;
+}
+/* ------------------------------ NAV ---------------- */
+
+.account-adjust{
+    margin-top: 80px;
+    margin-left: 410px;
+    width: 50%;
+    background-color: #42b0f4;
+    border-radius: 6px;
+    padding: 10px 10px;
+}
+
+.account-adjust div{
+    padding: 5px 5px;
+    border-bottom: solid 2px black;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+.account-adjust h6{
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+.account-adjust p{
+    margin-top: 10px;
+    margin-left: 45px;
+    border: solid 2px black;
+    font-size: 16px;
+    background-color: white;
+    display: inline-block;
+    padding: 8px 8px;
+    border-radius: 3px;
+    width: 300px;
+}
+
+.user-adjust{
+    border-style: none;
+}
+
+.pass-adjust{
+    border-style: none;
+}
+
+.adjust{
+    margin-left: 20px;
+    padding: 8px 8px;
+}
+
+
+.info-adjust{
+    position: absolute;
+    left: 410px;
+    top: 370px;
+    background-color: #42b0f4;
+    border-radius: 6px;
+    width: 50%; 
+    padding: 20px 20px;
+}
+.info-form-title{
+    padding: 5px 5px;
+    border-bottom: solid 2px black;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+
+.FName{
+    padding: 8px 8px;
+    background-color: white;
+}
+.FName p{
+    border-radius: 6px;
+    padding: 10px 10px;
+    width: 550px;
+    border: double 3px  black;
+    display: inline-block;
+}
+.fname-adjust{
+    border-style: none;
+    width: 427px;
+}
+
+
+
+.LName{
+    padding: 8px 8px;
+    background-color: white;
+}
+.LName p{
+    border-radius: 6px;
+    padding: 10px 10px;
+    width: 550px;
+    border: double 3px  black;
+    display: inline-block;
+}
+.lname-adjust{
+    border-style: none;
+    width: 487px;
+}
+
+
+
+.DOB{
+    background-color: white;
+    padding: 15px 15px;
+}
+.DOB p{
+    display: inline-block;
+    margin-right: 40px;
+}
+.DOB p span{
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+}
+
+
+.year-select, .month-select, .day-select{
+    padding: 5px 5px;
+    border-radius: 4px;
+}
+
+
+.Sex{
+    background-color: white;
+    padding: 15px 15px;
+}
+.Sex p span{
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
+.sex-select{
+    padding: 5px 5px;
+    border-radius: 4px;
+}
+
+
+.Address{
+    padding: 8px 8px;
+    background-color: white;
+}
+.Address p{
+    border-radius: 6px;
+    padding: 10px 10px;
+    width: 550px;
+    border: double 3px  black;
+    display: inline-block;
+}
+.add-adjust{
+    border-style: none;
+    width: 470px;
+}
+
+
+.Email{
+    padding: 8px 8px;
+    background-color: white;
+}
+.Email p{
+    border-radius: 6px;
+    padding: 10px 10px;
+    width: 550px;
+    border: double 3px  black;
+    display: inline-block;
+}
+.mail-adjust{
+    border-style: none;
+    width: 475px;
+}
+
+
+.Contact{
+    padding: 8px 8px;
+    background-color: white;
+}
+.Contact p{
+    border-radius: 6px;
+    padding: 10px 10px;
+    width: 550px;
+    border: double 3px  black;
+    display: inline-block;
+}
+.contact-adjust{
+    border-style: none;
+    width: 459px;
+}
+
+
+.change-info{
+    cursor: pointer;
+    background-color: white;
+    position: absolute;
+    top: 1050px;
+    left: 720px;
+    padding: 15px 15px;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 6px;
+}

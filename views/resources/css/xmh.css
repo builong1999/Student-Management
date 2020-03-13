@@ -1,0 +1,124 @@
+html{
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fafafa;
+}
+.header{
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 14vh;
+    background-color:#ffffff;
+    border-bottom: solid 4px #f3f3f3;
+}
+*{
+    margin: 0px;
+}
+.logo{
+    width: 70px;
+    float: left;
+}
+h1{
+    font-size: 25px;
+    font-weight: 530;
+    margin-top: 30px;
+    float: left;
+    margin-left: 10px;
+    color:black;
+}
+.main1{
+    display: inline;
+    list-style: none;
+    margin-right: 50px;
+    margin-top: 35px;
+    float: right;
+}
+.main1 li a{
+    text-decoration: none;
+    font-size: 25px;
+    color:rgb(48, 146, 236);
+}
+.main1 li{
+    display: inline-block;
+    margin-right: 30px;
+}
+.clearfix::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+.main2{
+    list-style: none;
+    width: 300px;
+    margin-top: 100px;
+    margin-left:0px;
+    height: 550px;
+    float: left;
+    background-color: #f5f5f5;
+    position: relative;
+}
+.main2 li a{
+    text-decoration: none;
+    font-size: 20px;
+    color:rgb(48, 146, 236);
+    margin-left: 20px;
+    
+}
+.main2 li{
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+.content{
+    float: left;
+    display: inline;
+    border: 2px solid rgb(127, 183, 231);
+    padding: 0.5em;
+    margin-top: 120px;
+    margin-left: 50px;
+    margin-right: 10px;
+    width: 910px;
+    height: 500px;
+    border-radius: 1px;
+    background-color: #f5f5f5;
+
+}
+.text{
+    font-size: 20px;
+    color:black;
+    border-bottom:solid #dcdcdc 2px;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 80px;
+}
+.fixed{
+    position: fixed;
+}
+
+#form-nav{
+    overflow: auto;
+    height: 45vh;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+#home{
+    border-bottom: solid #dcdcdc 2px;
+}
+#Cpass{
+    border-bottom: solid #dcdcdc 2px;
+}
+#dk{
+    border-bottom: solid #dcdcdc 2px;
+}
+#xmh{
+    border-bottom: solid #dcdcdc 2px;
+}
+#chon{
+    width: 100%;
+}
+#bt{
+    margin-top: 20px;
+    width: 5%;
+}
+#tb{
+    width: 90%;
+}

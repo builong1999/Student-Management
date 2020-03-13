@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Điều chỉnh thông tin</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+    <link rel="stylesheet" href="/views/resources/css/firstLogin.css">
+</head>
+
+<body>
+    <header>
+        <div class="pageTitle">
+            <p>ĐIỀU CHỈNH THÔNG TIN LẦN ĐẦU</p>
+        </div>
+    </header>
+    <!-- --------------------------------------------------------------- -->
+    <nav id="main-nav">
+        <div class="account-adjust">
+            <div>
+                Điều chỉnh tài khoản
+            </div>
+            <h6 id="user-check" >Lỗi</h6>
+            <h6 id="pass-check">Bạn chưa nhập mật khẩu</h6>
+            <p>Tên đăng nhập: <input type="text" class="user-adjust" id="user-adjust" maxlength="15"></p>
+            <p>Mật khẩu: <input type="password" class="pass-adjust" id="pass-adjust" maxlength="30"></p>
+        </div>
+        <div class="info-adjust">
+            <div class="info-form-title">
+                Thông tin cá nhân
+            </div>
+            <div class="FName">
+                <p>Họ tên đệm : <input type="text" id="Fname-adjust" class="fname-adjust" maxlength="30">
+                </p>
+                <h6 id="fname-check">Bạn chưa điền thông tin</h6>
+            </div>
+            <div class="LName">
+                <p>Tên: <input type="text" id="Lname-adjust" class="lname-adjust" maxlength="10"></p>
+                <h6 id="lname-check">Bạn chưa điền thông tin</h6>
+            </div>
+            <div class="Sex">
+                <p><span>Bạn là:</span> <select name="sex-select" id="sex-select" class="sex-select">
+                        <option value="1">Nam</option>
+                        <option value="0"> Nữ</option>
+                    </select></p>
+            </div>
+            <div class="DOB">
+                <p> Ngày sinh:
+                    <span>Ngày</span> <select name="daySelect" id="day-select" class="day-select"> </select>
+                    <span>Tháng</span> <select name="monthSelect" id="month-select" class="month-select"> </select>
+                    <span>Năm</span> <select name="yearSelect" id="year-select" class="year-select"> </select>
+                </p>
+                <h6 id="d-check">Ngày bạn lựa chọn sai</h6>
+            </div>
+            <div class="Address">
+                <p>Địa chỉ:<input type="text" id="address-adjust" class="add-adjust" maxlength="200"></p>
+                <h6 id="address-check">Bạn chưa điền thông tin</h6>
+            </div>
+            <div class="Email">
+                <p>Email: <input type="text" id="mail-adjust" class="mail-adjust" maxlength="30"></p>
+                <h6 id="email-check">Bạn chưa điền thông tin</h6>
+            </div>
+            <div class="Contact">
+                <p>Liên lạc: <input type="text" id="contact-adjust" class="contact-adjust" maxlength="13"></p>
+                <h6 id="contact-check">Bạn chưa điền thông tin</h6>
+            </div>
+        </div>
+        <input type="Submit" class="change-info" id="change-info" value="Xác nhận">
+    </nav>
+    <script src="/views/resources/js/fistlogin.js"></script>
+</body>
+
+</html>

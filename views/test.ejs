@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <header style="background-color: red">
+        <h1>This is HEADER size select from <%-Header%></h1>
+        <!-- Header là biến truyền từ bên server test.js -->
+    </header>
+    <nav style="background-color: blue">
+        <h2>This is Nav size select from <%-Nav%></h2>
+        <!-- Này cũng là biến truyền từ bên server -->
+        <form action="/test/done" method="POST" style="background-color: violet">
+            <input type="text" value="Long đẹp trai v~" name="testInput"> 
+            <!-- Này là thẻ input để xác nhận value gửi về server -->
+            <input type="submit" value="Submit">
+            <!-- Thuộc tính post sẽ được kích hoạt với link /test/done qua cái btn này -->
+        </form>
+        <%
+        if(Check){  <!-- Cái này kiểm tra biến check coi đoạn lệnh này có được thực thi hay k-->
+            %>
+            <%
+            for(var i = 0; i < 10; i++){
+                %>
+                <h4>Index : <%-i%> Value <%-Check%></h4> <!-- Lặp 10 lần in ra biến Check được nhập từ input-->
+                <%
+            }
+            %>
+            <%
+        }
+        %>
+    </nav>
+    <footer style="background-color: green">
+        <h3>This is Footer size select from <%-Footer%></h3>
+    </footer>
+</body>
+
+</html>
